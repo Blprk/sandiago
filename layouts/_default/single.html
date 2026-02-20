@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="container">
+    <article>
+        {{ partial "breadcrumbs.html" . }}
+        <header>
+            <h1>{{ .Title }}</h1>
+            <div class="post-meta">
+                {{ .Date.Format "Jan 02, 2006" }} // {{ .ReadingTime }} min
+            </div>
+        </header>
+        <div class="content">
+            {{ .Content }}
+        </div>
+    </article>
+</div>
+{{ end }}

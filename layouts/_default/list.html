@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="container">
+    <div class="post-list">
+        {{ range $index, $element := .Pages }}
+        <div class="post-card color-{{ mod $index 3 }}">
+            <div class="segments">
+                <span class="segment seg-purple">{{ .Date.Format "2006.01" }}</span>
+                <span class="segment seg-yellow">{{ .ReadingTime }} MIN</span>
+            </div>
+            <a href="{{ .Permalink }}" class="title">{{ .Title }}</a>
+            <p class="summary">{{ .Summary | truncate 200 }}</p>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

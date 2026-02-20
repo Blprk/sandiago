@@ -1,0 +1,19 @@
+baseURL = "https://Blprk.github.io/sandiago/"
+languageCode = "en-us"
+title = "FIGURE OF SPEECH"
+theme = []
+enableEmoji = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  description = "High performance engineering blog."
+  author = "Engineer"
+
+[build]
+  writeStats = true
+
+[minify]
+  disableXML = true
+  minifyOutput = true

@@ -1,0 +1,8 @@
+<div class="breadcrumbs">
+    <a href="{{ .Site.BaseURL | relURL }}">ROOT</a>
+    {{ range (split .RelPermalink "/") }}
+        {{ if and (ne . "") (ne . "posts") (ne . "sandiago") }}
+            <span>{{ . | humanize | lower }}</span>
+        {{ end }}
+    {{ end }}
+</div>
